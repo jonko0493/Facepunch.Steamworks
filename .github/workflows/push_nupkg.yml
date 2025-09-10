@@ -16,16 +16,22 @@ jobs:
       uses: actions/setup-dotnet@v5
       with:
         dotnet-version: 9.0.x
+    - name: Download and unzip Steamworks API
+      run : |
+        wget https://haroohie.nyc3.cdn.digitaloceanspaces.com/bootstrap/steamworks/steamworks.tar.gz
+        mkdir -p Facepunch.Steamworks.Package/runtimes/
+        tar xfz steamworks.tar.gz -C Facepunch.Steamworks.Package/runtimes/
     - name: Restore dependencies
       run: |
         dotnet restore ./Facepunch.Steamworks/Facepunch.Steamworks.Posix.csproj
         dotnet restore ./Facepunch.Steamworks/Facepunch.Steamworks.Win32.csproj
         dotnet restore ./Facepunch.Steamworks/Facepunch.Steamworks.Win64.csproj
-        dotnet restore ./Facepunch.Steamworks.Test/Facepunch.Steamworks.TestWin32.csproj
-        dotnet restore ./Facepunch.Steamworks.Test/Facepunch.Steamworks.TestWin64.csproj
-    - name: Build project
-      run: dotnet build Facepunch.Steamworks/Facepunch.Steamworks.Win32.csproj -c Release
+    - name: Build projects
+      run: |
+        dotnet build Facepunch.Steamworks/Facepunch.Steamworks.Posix.csproj -c Release
+        dotnet build Facepunch.Steamworks/Facepunch.Steamworks.Win32.csproj -c Release
+        dotnet build Facepunch.Steamworks/Facepunch.Steamworks.Win64.csproj -c Release
     - name: Package project
-      run: dotnet pack Facepunch.Steamworks/Facepunch.Steamworks.Win32.csproj --no-build -c Release
+      run: dotnet pack Facepunch.Steamworks/Facepunch.Steamworks.Win64.csproj --no-build -c Release
     - name: Publish package
       run: 

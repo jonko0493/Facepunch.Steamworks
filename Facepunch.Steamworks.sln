@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facepunch.Steamworks.TestWi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facepunch.Steamworks.TestWin64", "Facepunch.Steamworks.Test\Facepunch.Steamworks.TestWin64.csproj", "{165081E3-BD96-404B-B83E-A635F1AF7CDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facepunch.Steamworks", "Facepunch.Steamworks\Facepunch.Steamworks.csproj", "{1A0FEC60-5CDA-40D1-A709-1062D1B9C674}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facepunch.Steamworks.Package", "Facepunch.Steamworks.Package\Facepunch.Steamworks.Package.csproj", "{2DB507A8-C25C-4306-8293-86C5B267FDE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,18 +99,18 @@ Global
 		{165081E3-BD96-404B-B83E-A635F1AF7CDE}.Release|x64.Build.0 = Release|x64
 		{165081E3-BD96-404B-B83E-A635F1AF7CDE}.Release|x86.ActiveCfg = Release|x86
 		{165081E3-BD96-404B-B83E-A635F1AF7CDE}.Release|x86.Build.0 = Release|x86
-		{1A0FEC60-5CDA-40D1-A709-1062D1B9C674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A0FEC60-5CDA-40D1-A709-1062D1B9C674}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A0FEC60-5CDA-40D1-A709-1062D1B9C674}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{1A0FEC60-5CDA-40D1-A709-1062D1B9C674}.Debug|x64.Build.0 = Debug|Any CPU
-		{1A0FEC60-5CDA-40D1-A709-1062D1B9C674}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{1A0FEC60-5CDA-40D1-A709-1062D1B9C674}.Debug|x86.Build.0 = Debug|Any CPU
-		{1A0FEC60-5CDA-40D1-A709-1062D1B9C674}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A0FEC60-5CDA-40D1-A709-1062D1B9C674}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A0FEC60-5CDA-40D1-A709-1062D1B9C674}.Release|x64.ActiveCfg = Release|Any CPU
-		{1A0FEC60-5CDA-40D1-A709-1062D1B9C674}.Release|x64.Build.0 = Release|Any CPU
-		{1A0FEC60-5CDA-40D1-A709-1062D1B9C674}.Release|x86.ActiveCfg = Release|Any CPU
-		{1A0FEC60-5CDA-40D1-A709-1062D1B9C674}.Release|x86.Build.0 = Release|Any CPU
+		{2DB507A8-C25C-4306-8293-86C5B267FDE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DB507A8-C25C-4306-8293-86C5B267FDE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DB507A8-C25C-4306-8293-86C5B267FDE7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2DB507A8-C25C-4306-8293-86C5B267FDE7}.Debug|x64.Build.0 = Debug|Any CPU
+		{2DB507A8-C25C-4306-8293-86C5B267FDE7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2DB507A8-C25C-4306-8293-86C5B267FDE7}.Debug|x86.Build.0 = Debug|Any CPU
+		{2DB507A8-C25C-4306-8293-86C5B267FDE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DB507A8-C25C-4306-8293-86C5B267FDE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DB507A8-C25C-4306-8293-86C5B267FDE7}.Release|x64.ActiveCfg = Release|Any CPU
+		{2DB507A8-C25C-4306-8293-86C5B267FDE7}.Release|x64.Build.0 = Release|Any CPU
+		{2DB507A8-C25C-4306-8293-86C5B267FDE7}.Release|x86.ActiveCfg = Release|Any CPU
+		{2DB507A8-C25C-4306-8293-86C5B267FDE7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
