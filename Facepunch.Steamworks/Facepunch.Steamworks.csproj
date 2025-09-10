@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+        <RootNamespace>Steamworks</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Facepunch.Steamworks.Posix.csproj" />
+      <ProjectReference Include="..\Facepunch.Steamworks.Win64.csproj" />
+    </ItemGroup>
+
+</Project>
