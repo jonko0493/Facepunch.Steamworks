@@ -1,0 +1,31 @@
+name: Publish NuGet packages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout files
+      uses: actions/checkout@v5
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: 9.0.x
+    - name: Restore dependencies
+      run: |
+        dotnet restore ./Facepunch.Steamworks/Facepunch.Steamworks.Posix.csproj
+        dotnet restore ./Facepunch.Steamworks/Facepunch.Steamworks.Win32.csproj
+        dotnet restore ./Facepunch.Steamworks/Facepunch.Steamworks.Win64.csproj
+        dotnet restore ./Facepunch.Steamworks.Test/Facepunch.Steamworks.TestWin32.csproj
+        dotnet restore ./Facepunch.Steamworks.Test/Facepunch.Steamworks.TestWin64.csproj
+    - name: Build project
+      run: dotnet build Facepunch.Steamworks/Facepunch.Steamworks.Win32.csproj -c Release
+    - name: Package project
+      run: dotnet pack Facepunch.Steamworks/Facepunch.Steamworks.Win32.csproj --no-build -c Release
+    - name: Publish package
+      run: 
