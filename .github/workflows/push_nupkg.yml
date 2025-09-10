@@ -16,8 +16,6 @@ jobs:
       uses: actions/setup-dotnet@v5
       with:
         dotnet-version: 9.0.x
-      env:
-        NUGET_AUTH_TOKEN: ${{ secrets.AZURE_DEVOPS_TOKEN }} 
     - name: Download and unzip Steamworks API
       run : |
         wget https://haroohie.nyc3.cdn.digitaloceanspaces.com/bootstrap/steamworks/steamworks.tar.gz
@@ -39,4 +37,4 @@ jobs:
         dotnet pack Facepunch.Steamworks/Facepunch.Steamworks.Win64.csproj --no-build -c Release
         cp Facepunch.Steamworks.Package/bin/Release/*.nupkg Facepunch.Steamworks/bin/Release/
     - name: Publish package
-      run: dotnet nuget push --api-key AzureDevOps -s jonko-public Facepunch.Steamworks/bin/Release/*.nupkg
+      run: dotnet nuget push --api-key ${{ secrets.AZURE_DEVOPS_TOKEN }} -s jonko-public Facepunch.Steamworks/bin/Release/*.nupkg
