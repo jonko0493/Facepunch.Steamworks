@@ -27,14 +27,10 @@ jobs:
       run: |
         dotnet build ./Facepunch.Steamworks.Package/Facepunch.Steamworks.Package.csproj -c Release
         dotnet build Facepunch.Steamworks/Facepunch.Steamworks.Posix.csproj -c Release
-        dotnet build Facepunch.Steamworks/Facepunch.Steamworks.Win32.csproj -c Release
-        dotnet build Facepunch.Steamworks/Facepunch.Steamworks.Win64.csproj -c Release
     - name: Package projects
       run: |
         dotnet pack Facepunch.Steamworks.Package/Facepunch.Steamworks.Package.csproj --no-build -c Release
         dotnet pack Facepunch.Steamworks/Facepunch.Steamworks.Posix.csproj --no-build -c Release
-        dotnet pack Facepunch.Steamworks/Facepunch.Steamworks.Win32.csproj --no-build -c Release
-        dotnet pack Facepunch.Steamworks/Facepunch.Steamworks.Win64.csproj --no-build -c Release
         cp Facepunch.Steamworks.Package/bin/Release/*.nupkg Facepunch.Steamworks/bin/Release/
     - name: Publish package
       run: dotnet nuget push --api-key ${{ secrets.AZURE_DEVOPS_TOKEN }} -s jonko-public Facepunch.Steamworks/bin/Release/*.nupkg

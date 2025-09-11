@@ -47,6 +47,22 @@ namespace Steamworks
 			return SteamInput.Internal.GetAnalogActionData( Handle, SteamInput.GetAnalogActionHandle( actionName ) );
 		}
 
+		public void TriggerVibration( ushort leftSpeed, ushort rightSpeed )
+		{
+			SteamInput.Internal.TriggerVibration( Handle, leftSpeed, rightSpeed );
+		}
+
+		public void TriggerVibrationExtended( ushort leftSpeed, ushort rightSpeed, ushort leftTriggerSpeed,
+			ushort rightTriggerSpeed )
+		{
+			SteamInput.Internal.TriggerVibrationExtended( Handle, leftSpeed, rightSpeed, leftTriggerSpeed, rightTriggerSpeed );
+		}
+
+		public void ShowBindingPanel()
+		{
+			SteamInput.Internal.ShowBindingPanel( Handle );
+		}
+		
 
 		public override string ToString() => $"{InputType}.{Handle.Value}";
 

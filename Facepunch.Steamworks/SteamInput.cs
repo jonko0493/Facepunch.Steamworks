@@ -134,7 +134,7 @@ namespace Steamworks
 
 			return Internal.GetGlyphSVGForActionOrigin( origin, 0 );
 		}
-
+		
 		internal static Dictionary<string, InputDigitalActionHandle_t> DigitalHandles = new Dictionary<string, InputDigitalActionHandle_t>();
 		internal static InputDigitalActionHandle_t GetDigitalActionHandle( string name )
 		{
