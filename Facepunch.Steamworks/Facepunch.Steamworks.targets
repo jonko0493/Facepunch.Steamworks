@@ -6,8 +6,8 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<PackageVersion>2.4.2</PackageVersion>
-		<FileVersion>2.4.2</FileVersion>
+		<PackageVersion>2.4.3</PackageVersion>
+		<FileVersion>2.4.3</FileVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

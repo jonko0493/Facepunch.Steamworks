@@ -47,17 +47,32 @@ namespace Steamworks
 			return SteamInput.Internal.GetAnalogActionData( Handle, SteamInput.GetAnalogActionHandle( actionName ) );
 		}
 
+		/// <summary>
+		/// Trigger a vibration event on supported controllers.
+		/// </summary>
+		/// <param name="leftSpeed">The intensity value for the left rumble motor.</param>
+		/// <param name="rightSpeed">The intensity value of the right rumble motor.</param>
 		public void TriggerVibration( ushort leftSpeed, ushort rightSpeed )
 		{
 			SteamInput.Internal.TriggerVibration( Handle, leftSpeed, rightSpeed );
 		}
 
+		/// <summary>
+		/// Trigger a vibration event on supported controllers, including Xbox Impulse Trigger motor values.
+		/// </summary>
+		/// <param name="leftSpeed">The intensity value for the left rumble motor.</param>
+		/// <param name="rightSpeed">The intensity value of the right rumble motor.</param>
+		/// <param name="leftTriggerSpeed">The intensity value for the left Xbox Impulse Trigger motor.</param>
+		/// <param name="rightTriggerSpeed">The intensity value of the right Xbox Impulse Trigger motor.</param>
 		public void TriggerVibrationExtended( ushort leftSpeed, ushort rightSpeed, ushort leftTriggerSpeed,
 			ushort rightTriggerSpeed )
 		{
 			SteamInput.Internal.TriggerVibrationExtended( Handle, leftSpeed, rightSpeed, leftTriggerSpeed, rightTriggerSpeed );
 		}
 
+		/// <summary>
+		/// Shows the Steam Input binding panel for this controller
+		/// </summary>
 		public void ShowBindingPanel()
 		{
 			SteamInput.Internal.ShowBindingPanel( Handle );
