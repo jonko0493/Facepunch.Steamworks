@@ -209,6 +209,16 @@ namespace Steamworks
 		}
 
 		/// <summary>
+		/// Unlocks an achievement.
+		/// </summary>
+		/// <param name="name">The name of the achievement to unlock</param>
+		/// <returns>This function returns true upon success; otherwise, false.</returns>
+		public static bool SetAchievement( string name )
+		{
+			return Internal.SetAchievement( name );
+		}
+
+		/// <summary>
 		/// Set a stat value. This will automatically call <see cref="StoreStats"/> after a successful call.
 		/// </summary>
 		public static bool SetStat( string name, int value )
