@@ -112,13 +112,13 @@ namespace Steamworks
 		/// action set in use for the controller will be used for the lookup. You should cache the result and
 		/// maintain your own list of loaded PNG assets.
 		/// </summary>
-		public static string GetPngActionGlyph( Controller controller, string action, GlyphSize size )
+		public static string GetPngActionGlyph( Controller controller, string action, GlyphSize size, uint flags = 0 )
 		{
 			InputActionOrigin origin = InputActionOrigin.None;
 
 			Internal.GetDigitalActionOrigins( controller.Handle, Internal.GetCurrentActionSet( controller.Handle ), GetDigitalActionHandle( action ), ref origin );
 
-			return Internal.GetGlyphPNGForActionOrigin( origin, size, 0 );
+			return Internal.GetGlyphPNGForActionOrigin( origin, size, flags );
 		}
 
 		/// <summary>
@@ -126,13 +126,13 @@ namespace Steamworks
 		/// action set in use for the controller will be used for the lookup. You should cache the result and
 		/// maintain your own list of loaded PNG assets.
 		/// </summary>
-		public static string GetSvgActionGlyph( Controller controller, string action )
+		public static string GetSvgActionGlyph( Controller controller, string action, uint flags = 0 )
 		{
 			InputActionOrigin origin = InputActionOrigin.None;
 
 			Internal.GetDigitalActionOrigins( controller.Handle, Internal.GetCurrentActionSet( controller.Handle ), GetDigitalActionHandle( action ), ref origin );
 
-			return Internal.GetGlyphSVGForActionOrigin( origin, 0 );
+			return Internal.GetGlyphSVGForActionOrigin( origin, flags );
 		}
 		
 		internal static Dictionary<string, InputDigitalActionHandle_t> DigitalHandles = new Dictionary<string, InputDigitalActionHandle_t>();
