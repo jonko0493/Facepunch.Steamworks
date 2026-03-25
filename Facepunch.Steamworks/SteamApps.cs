@@ -183,8 +183,9 @@ namespace Steamworks
 		{
 			uint flags = 0;
 			uint buildId = 0;
-			
-			if ( !Internal.GetBetaInfo( betaIndex, ref flags, ref buildId, out var name, out var description ) )
+
+			uint lastUpdated = 0;
+			if ( !Internal.GetBetaInfo( betaIndex, ref flags, ref buildId, out var name, out var description, ref lastUpdated ) )
 				return null;
 
 			return new BetaInformation
